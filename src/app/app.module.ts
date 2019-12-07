@@ -20,6 +20,8 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { TreeComponent } from './tree/tree.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { MatSortModule } from '@angular/material/sort';
     HomeComponent,
     NavbarComponent,
     TableComponent,
+    TreeComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

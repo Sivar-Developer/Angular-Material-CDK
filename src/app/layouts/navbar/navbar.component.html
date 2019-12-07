@@ -1,14 +1,15 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav dark" fixedInViewport
+  <mat-sidenav #drawer class="sidenav" 
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="side"
+      [mode]="over"
       [opened]="false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/" routerLinkActive="active">12th Grade - Science</a>
-      <a mat-list-item routerLink="/table" routerLinkActive="active">12th Grade - Litrature</a>
-      <a mat-list-item routerLink="/ninth_grade" routerLinkActive="active">9th Grade</a>
+      <a mat-list-item routerLink="/" routerLinkActive="active">Home</a>
+      <a mat-list-item routerLink="/table" routerLinkActive="active">Table</a>
+      <a mat-list-item routerLink="/tree" routerLinkActive="active">Tree</a>
     </mat-nav-list>
+    <app-tree></app-tree>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
@@ -20,7 +21,9 @@
         >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Qutabkhana</span>
+      <!-- <span></span> -->
+      <button mat-button no-padding no-margin>Material CDK</button>
+      
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
